@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pe.edu.upeu.sispro.entity.Plan;
 import pe.edu.upeu.sispro.service.PlanService;
 
+
 @RestController
 public class PlanController {
 	@Autowired
@@ -24,14 +25,12 @@ public class PlanController {
 		return planService.listar();
 	}
 	
-	
-	/*
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/add")
 	public Map<String, Object> save(@RequestBody Plan plan){
 		return planService.create(plan);
 	}
-	*/
+	
 	
 
 }

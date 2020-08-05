@@ -22,12 +22,12 @@ public class PlanServiceImp implements PlanService{
 		// TODO Auto-generated method stub
 		return planDao.listar();
 	}
-/*
+
 	@Override
 	public Map<String, Object> create(Plan plan) {
 		return planDao.create(plan);
 	}
-*/
+
 
 
 }

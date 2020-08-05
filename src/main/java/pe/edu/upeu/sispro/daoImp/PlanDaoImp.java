@@ -17,12 +17,14 @@ import pe.edu.upeu.sispro.dao.PlanDao;
 import pe.edu.upeu.sispro.entity.Plan;
 
 
+
 @Repository
 public class PlanDaoImp implements PlanDao{
-	@Autowired
-	//private SimpleJdbcCall simplejdbcCall;
-	private JdbcTemplate jdbcTemplate;
 	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	private SimpleJdbcCall simplejdbcCall;
+
 	
 	@Override
 	public List<Plan> listar() {
@@ -30,7 +32,7 @@ public class PlanDaoImp implements PlanDao{
 		return jdbcTemplate.query(sql, BeanPropertyRowMapper.newInstance(Plan.class));
 	}
 
-/*
+
 	@Override
 	public Map<String, Object> create(Plan plan) {
 		simplejdbcCall = new SimpleJdbcCall(jdbcTemplate)
@@ -47,7 +49,11 @@ public class PlanDaoImp implements PlanDao{
 		return simplejdbcCall.execute(in);
 		
 	}
-	*/
+
+
+
+		
+
 
 
 }
