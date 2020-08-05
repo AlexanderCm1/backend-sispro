@@ -1,28 +1,32 @@
 package pe.edu.upeu.sispro.entity;
 
 public class Problematica {
+	private int info_comunidad_id;
 	private int codigo_beneficiario;
 	private String nombre;
 	private String apellidos;
 	private String problematica;
 	private String fecha_publicacion;
 	private String comunidad;
-	
-	
-	
-	
 	public Problematica() {
-
-	}
-	public Problematica(int codigo_beneficiario, String nombre, String apellidos, String problematica,
-			String fecha_publicacion, String comunidad) {
 		super();
+	}
+	public Problematica(int info_comunidad_id, int codigo_beneficiario, String nombre, String apellidos,
+			String problematica, String fecha_publicacion, String comunidad) {
+		super();
+		this.info_comunidad_id = info_comunidad_id;
 		this.codigo_beneficiario = codigo_beneficiario;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.problematica = problematica;
 		this.fecha_publicacion = fecha_publicacion;
 		this.comunidad = comunidad;
+	}
+	public int getInfo_comunidad_id() {
+		return info_comunidad_id;
+	}
+	public void setInfo_comunidad_id(int info_comunidad_id) {
+		this.info_comunidad_id = info_comunidad_id;
 	}
 	public int getCodigo_beneficiario() {
 		return codigo_beneficiario;
@@ -60,6 +64,10 @@ public class Problematica {
 	public void setComunidad(String comunidad) {
 		this.comunidad = comunidad;
 	}
+	
+	
+	
+
 
 	
 }
