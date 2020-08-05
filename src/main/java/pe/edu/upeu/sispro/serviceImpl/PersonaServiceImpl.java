@@ -21,4 +21,5 @@ public class PersonaServiceImpl implements PersonaService{
 		return personaDao.listar();
 	}
 	
+	
 }
